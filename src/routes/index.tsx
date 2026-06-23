@@ -13,10 +13,10 @@ import gallery3 from "@/assets/gallery-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "D&M Parlour — Sharp Cuts. Bold Style. | Ongata Rongai" },
-      { name: "description", content: "Barbershop and unisex salon in Ongata Rongai, Kenya. Fades, beards, braids, weaves, mani-pedi and makeup. Book your chair online." },
-      { property: "og:title", content: "D&M Parlour — Sharp Cuts. Bold Style." },
-      { property: "og:description", content: "Barbershop and unisex salon in Ongata Rongai, Kenya. Book your chair online." },
+      { title: "D&M Parlour | Barbershop & Salon in Ongata Rongai, Kenya" },
+      { name: "description", content: "D&M Parlour is a barbershop and unisex salon in Ongata Rongai, near Maasai Mall. Fades, beards, braids, weaves & glam — book online today." },
+      { property: "og:title", content: "D&M Parlour | Barbershop & Salon in Ongata Rongai, Kenya" },
+      { property: "og:description", content: "D&M Parlour is a barbershop and unisex salon in Ongata Rongai, near Maasai Mall. Fades, beards, braids, weaves & glam — book online today." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -62,9 +62,9 @@ function HomePage() {
 
             <div className="mt-6 flex items-center gap-4">
               <span className="h-px w-14 bg-primary" />
-              <p className="font-display text-lg font-semibold uppercase tracking-[0.25em] text-primary">
+              <h2 className="font-display text-lg font-semibold uppercase tracking-[0.25em] text-primary">
                 Sharp Cuts. Bold Style.
-              </p>
+              </h2>
             </div>
 
             <p className="mt-6 max-w-lg text-base text-foreground/80 sm:text-lg">
@@ -151,7 +151,7 @@ function HomePage() {
                 <p className="mt-2 text-sm text-muted-foreground">{s.description}</p>
                 <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
                   <span className="font-display text-lg font-bold text-primary">{formatKES(s.price)}</span>
-                  <span className="text-xs text-muted-foreground">{s.duration} min</span>
+                  <span className="text-xs text-muted-foreground">{s.duration}</span>
                 </div>
               </Link>
             ))}

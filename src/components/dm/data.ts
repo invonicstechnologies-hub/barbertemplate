@@ -10,27 +10,26 @@ export interface Service {
   name: string;
   description: string;
   price: number; // KES
-  duration: number; // minutes
+  duration: string;
   category: ServiceCategory;
 }
 
 export const services: Service[] = [
   // Barbershop
-  { id: "classic-cut", name: "Classic Cut", description: "Clean scissor or clipper cut tailored to your style.", price: 500, duration: 30, category: "barbershop" },
-  { id: "skin-fade", name: "Skin Fade", description: "Razor-sharp fade blended from skin to top.", price: 800, duration: 45, category: "barbershop" },
-  { id: "beard-trim", name: "Beard Trim & Line-up", description: "Crisp lines, shaped beard, hot finish.", price: 300, duration: 20, category: "barbershop" },
-  { id: "hot-towel-shave", name: "Hot Towel Shave", description: "Traditional straight-razor shave with steaming towel.", price: 700, duration: 35, category: "barbershop" },
-  { id: "kids-cut", name: "Kids Cut (under 12)", description: "Patient, careful cuts for the little ones.", price: 400, duration: 25, category: "barbershop" },
-  { id: "fade-beard-combo", name: "Skin Fade + Beard", description: "Our signature combo — fresh from top to chin.", price: 1500, duration: 60, category: "barbershop" },
+  { id: "skin-fade", name: "Skin Fade", description: "Clean, sharp fade tailored to your style", price: 500, duration: "30 min", category: "barbershop" },
+  { id: "beard-trim", name: "Beard Trim & Shape", description: "Precision beard sculpting and lineup", price: 300, duration: "20 min", category: "barbershop" },
+  { id: "hot-towel-shave", name: "Hot Towel Shave", description: "Classic straight-razor shave with hot towel finish", price: 600, duration: "30 min", category: "barbershop" },
+  { id: "kids-cut", name: "Kids Cut", description: "Gentle, friendly cuts for the little ones", price: 350, duration: "20 min", category: "barbershop" },
+  { id: "line-up", name: "Line Up / Edge Up", description: "Crisp edges and hairline cleanup", price: 250, duration: "15 min", category: "barbershop" },
+  { id: "fade-beard-combo", name: "Haircut + Beard Combo", description: "Full grooming — haircut and beard in one session", price: 800, duration: "45 min", category: "barbershop" },
 
   // Salon
-  { id: "box-braids", name: "Box Braids", description: "Long-lasting box braids, your length, your style.", price: 2500, duration: 240, category: "salon" },
-  { id: "knotless-braids", name: "Knotless Braids", description: "Lightweight, scalp-friendly knotless braiding.", price: 2500, duration: 240, category: "salon" },
-  { id: "weaving", name: "Weaving & Install", description: "Sew-in weaves and full installs.", price: 2000, duration: 180, category: "salon" },
-  { id: "silk-press", name: "Silk Press", description: "Smooth, swingy silk-press with heat protection.", price: 1500, duration: 90, category: "salon" },
-  { id: "mani-pedi", name: "Manicure + Pedicure", description: "Full mani-pedi with polish or gel finish.", price: 1200, duration: 75, category: "salon" },
-  { id: "makeup", name: "Glam Makeup", description: "Studio-grade makeup for events and shoots.", price: 2000, duration: 60, category: "salon" },
-  { id: "hair-treatment", name: "Deep Hair Treatment", description: "Conditioning, scalp care and protein treatment.", price: 800, duration: 45, category: "salon" },
+  { id: "knotless-braids", name: "Knotless Braids", description: "Lightweight, natural-looking knotless braids", price: 2500, duration: "3–4 hrs", category: "salon" },
+  { id: "cornrows", name: "Cornrows", description: "Neat, classic cornrow styling", price: 1000, duration: "1.5 hrs", category: "salon" },
+  { id: "weave-install", name: "Weave Install", description: "Professional weave install, blended finish", price: 2000, duration: "2–3 hrs", category: "salon" },
+  { id: "treatment", name: "Treatment & Deep Conditioning", description: "Restorative hair treatment for strength and shine", price: 800, duration: "45 min", category: "salon" },
+  { id: "mani-pedi", name: "Manicure & Pedicure", description: "Full hand and foot care, polish included", price: 1200, duration: "1 hr", category: "salon" },
+  { id: "makeup", name: "Makeup (Glam)", description: "Event-ready makeup application", price: 1500, duration: "1 hr", category: "salon" },
 ];
 
 export interface Stylist {

@@ -17,10 +17,10 @@ import team3 from "@/assets/team-3.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services & Gallery — D&M Parlour | Cuts, Beards, Braids" },
-      { name: "description", content: "Barbershop and salon services in Ongata Rongai. Skin fades, beard trims, braids, weaves, mani-pedi and makeup — with KES pricing." },
-      { property: "og:title", content: "Services & Gallery — D&M Parlour" },
-      { property: "og:description", content: "Full menu of barber and salon services with KES pricing." },
+      { title: "Barbershop & Salon Services in Ongata Rongai | D&M Parlour" },
+      { name: "description", content: "Explore D&M Parlour's barbershop and salon services in Ongata Rongai — skin fades, beard trims, knotless braids, weaves, treatments & more. Book now." },
+      { property: "og:title", content: "Barbershop & Salon Services in Ongata Rongai | D&M Parlour" },
+      { property: "og:description", content: "Explore D&M Parlour's barbershop and salon services in Ongata Rongai — skin fades, beard trims, knotless braids, weaves, treatments & more. Book now." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -29,14 +29,14 @@ export const Route = createFileRoute("/services")({
 });
 
 const galleryImages = [
-  { src: gallery1, alt: "Sharp skin fade" },
-  { src: gallery2, alt: "Long box braids" },
-  { src: heroImg, alt: "Barber at work" },
-  { src: gallery3, alt: "Hot towel shave" },
-  { src: gallery4, alt: "Manicure with gold accent" },
-  { src: interiorImg, alt: "Shop interior" },
-  { src: team1, alt: "Barber portrait" },
-  { src: team3, alt: "Stylist portrait" },
+  { src: gallery1, alt: "Skin fade haircut result at D&M Parlour barbershop" },
+  { src: gallery2, alt: "Knotless braids styling at D&M Parlour Ongata Rongai" },
+  { src: heroImg, alt: "Skin fade haircut result at D&M Parlour barbershop" },
+  { src: gallery3, alt: "Beard trim and shave service at D&M Parlour Ongata Rongai" },
+  { src: gallery4, alt: "Manicure and pedicure salon service at D&M Parlour Ongata Rongai" },
+  { src: interiorImg, alt: "D&M Parlour barbershop and salon interior, Ongata Rongai" },
+  { src: team1, alt: "Skin fade haircut result at D&M Parlour barbershop" },
+  { src: team3, alt: "Knotless braids styling at D&M Parlour Ongata Rongai" },
 ];
 
 function ServiceList({ category }: { category: ServiceCategory }) {
@@ -54,7 +54,7 @@ function ServiceList({ category }: { category: ServiceCategory }) {
             <div>
               <div className="font-display text-2xl font-bold text-primary">{formatKES(s.price)}</div>
               <div className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
-                <Clock className="h-3 w-3" /> {s.duration} min
+                <Clock className="h-3 w-3" /> {s.duration}
               </div>
             </div>
             <Button asChild size="sm" className="font-display text-xs font-semibold uppercase tracking-wider">
@@ -76,8 +76,9 @@ function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             eyebrow="The Menu"
-            title="Services & Pricing"
+            title="Our Services"
             description="Transparent KES pricing for every chair. Tap a service to start a booking."
+            as="h1"
           />
         </div>
       </section>
@@ -90,13 +91,13 @@ function ServicesPage() {
                 value="barbershop"
                 className="font-display text-sm font-bold uppercase tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
-                Barbershop
+                <div role="heading" aria-level={2} className="contents">Barbershop</div>
               </TabsTrigger>
               <TabsTrigger
                 value="salon"
                 className="font-display text-sm font-bold uppercase tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
-                Salon
+                <div role="heading" aria-level={2} className="contents">Salon</div>
               </TabsTrigger>
             </TabsList>
 
@@ -112,7 +113,7 @@ function ServicesPage() {
 
       <section className="border-t border-primary/20 bg-card/50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <SectionHeading eyebrow="Receipts" title="Gallery" align="center" description="A look at recent work from the chairs." />
+          <SectionHeading eyebrow="Receipts" title="Our Work" align="center" description="A look at recent work from the chairs." />
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
             {galleryImages.map((img, i) => (
               <div
