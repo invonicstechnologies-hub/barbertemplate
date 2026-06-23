@@ -13,10 +13,10 @@ import { businessInfo } from "@/components/dm/data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — D&M Parlour | Ongata Rongai" },
-      { name: "description", content: "Visit D&M Parlour in Ongata Rongai, Kenya. Address, phone, WhatsApp, opening hours and contact form." },
-      { property: "og:title", content: "Contact D&M Parlour" },
-      { property: "og:description", content: "Address, phone, WhatsApp and opening hours for D&M Parlour, Ongata Rongai." },
+      { title: "Contact D&M Parlour | Barbershop & Salon in Ongata Rongai" },
+      { name: "description", content: "Visit D&M Parlour in Ongata Rongai, near Maasai Mall. Call, WhatsApp, or stop by — open Mon–Sat 8am–8pm, Sun 10am–6pm." },
+      { property: "og:title", content: "Contact D&M Parlour | Barbershop & Salon in Ongata Rongai" },
+      { property: "og:description", content: "Visit D&M Parlour in Ongata Rongai, near Maasai Mall. Call, WhatsApp, or stop by — open Mon–Sat 8am–8pm, Sun 10am–6pm." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -63,8 +63,9 @@ function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             eyebrow="Drop In"
-            title="Get In Touch"
+            title="Visit Us"
             description="Slide into the DMs, ring the chair or just walk in. We're easy to find."
+            as="h1"
           />
         </div>
       </section>
@@ -81,9 +82,9 @@ function ContactPage() {
             </div>
 
             <div className="mt-8 rounded-sm border border-primary/30 bg-card p-6">
-              <div className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary">
+              <h2 className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary">
                 <Clock className="h-4 w-4" /> Opening Hours
-              </div>
+              </h2>
               <ul className="mt-4 space-y-2">
                 {businessInfo.hours.map((h) => (
                   <li key={h.day} className="flex justify-between border-b border-border/40 py-2 text-sm last:border-0">
@@ -108,7 +109,7 @@ function ContactPage() {
           {/* Form */}
           <div>
             <div className="rounded-sm border border-primary/30 bg-card p-6 sm:p-8">
-              <h3 className="font-display text-2xl font-bold uppercase tracking-wide">Send a message</h3>
+              <h2 className="font-display text-2xl font-bold uppercase tracking-wide">Send Us a Message</h2>
               <p className="mt-1 text-sm text-muted-foreground">For collabs, group bookings or general questions.</p>
 
               <form onSubmit={handleSubmit} className="mt-6 grid gap-5">

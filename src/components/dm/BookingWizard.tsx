@@ -17,8 +17,8 @@ const steps = [
   { id: 1, label: "Service", icon: Sparkles },
   { id: 2, label: "Stylist", icon: User2 },
   { id: 3, label: "Date & Time", icon: CalIcon },
-  { id: 4, label: "Details", icon: Phone },
-  { id: 5, label: "Confirm", icon: CheckCircle2 },
+  { id: 4, label: "Your Details", icon: Phone },
+  { id: 5, label: "Confirmed", icon: CheckCircle2 },
 ] as const;
 
 export function BookingWizard({
@@ -145,7 +145,7 @@ export function BookingWizard({
                       >
                         <div className="min-w-0">
                           <div className="font-display text-base font-bold uppercase tracking-wide">{s.name}</div>
-                          <div className="mt-1 text-xs text-muted-foreground">{s.duration} min</div>
+                          <div className="mt-1 text-xs text-muted-foreground">{s.duration}</div>
                         </div>
                         <div className="shrink-0 font-display text-sm font-bold text-primary">
                           {formatKES(s.price)}

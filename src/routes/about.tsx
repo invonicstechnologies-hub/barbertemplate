@@ -12,10 +12,10 @@ import gallery3 from "@/assets/gallery-3.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About & Team — D&M Parlour | Ongata Rongai" },
-      { name: "description", content: "Meet the barbers and stylists behind D&M Parlour. Our story, our shop and our chair-side crew in Ongata Rongai." },
-      { property: "og:title", content: "About & Team — D&M Parlour" },
-      { property: "og:description", content: "Meet the barbers and stylists behind D&M Parlour in Ongata Rongai." },
+      { title: "About D&M Parlour | Barbershop & Salon Team in Ongata Rongai" },
+      { name: "description", content: "Meet the barbers and stylists at D&M Parlour, Ongata Rongai's go-to barbershop and salon for fades, beards, braids, and glam — all under one roof." },
+      { property: "og:title", content: "About D&M Parlour | Barbershop & Salon Team in Ongata Rongai" },
+      { property: "og:description", content: "Meet the barbers and stylists at D&M Parlour, Ongata Rongai's go-to barbershop and salon for fades, beards, braids, and glam — all under one roof." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -40,7 +40,8 @@ function AboutPage() {
             <div>
               <SectionHeading
                 eyebrow="Our Story"
-                title="Built in Rongai, made for the culture."
+                title="Barbershop. Salon. One House."
+                as="h1"
               />
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
@@ -71,19 +72,19 @@ function AboutPage() {
           <SectionHeading eyebrow="The Shop" title="Inside D&M" align="center" />
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
             <div className="hover-zoom col-span-2 row-span-2 aspect-square overflow-hidden rounded-sm border border-primary/20 md:col-span-2 md:row-span-2">
-              <img src={interiorImg} alt="D&M Parlour interior" loading="lazy" className="h-full w-full object-cover" />
+              <img src={interiorImg} alt="D&M Parlour barbershop and salon interior, Ongata Rongai" loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="hover-zoom aspect-square overflow-hidden rounded-sm border border-primary/20">
-              <img src={heroImg} alt="Barber at work" loading="lazy" className="h-full w-full object-cover" />
+              <img src={heroImg} alt="Barber giving a skin fade haircut at D&M Parlour Ongata Rongai" loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="hover-zoom aspect-square overflow-hidden rounded-sm border border-primary/20">
-              <img src={gallery3} alt="Hot towel shave" loading="lazy" className="h-full w-full object-cover" />
+              <img src={gallery3} alt="Barber giving a skin fade haircut at D&M Parlour Ongata Rongai" loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="hover-zoom aspect-square overflow-hidden rounded-sm border border-primary/20">
-              <img src={gallery1} alt="Fresh fade" loading="lazy" className="h-full w-full object-cover" />
+              <img src={gallery1} alt="Barber giving a skin fade haircut at D&M Parlour Ongata Rongai" loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="hover-zoom aspect-square overflow-hidden rounded-sm border border-primary/20">
-              <img src={interiorImg} alt="Salon stations" loading="lazy" className="h-full w-full object-cover" />
+              <img src={interiorImg} alt="D&M Parlour barbershop and salon interior, Ongata Rongai" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -92,12 +93,12 @@ function AboutPage() {
       {/* Team */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <SectionHeading eyebrow="The Crew" title="Meet The Masters" align="center" />
+          <SectionHeading eyebrow="The Crew" title="Meet the Team" align="center" />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {stylists.map((s) => (
               <article key={s.id} className="group flex flex-col overflow-hidden rounded-sm border border-primary/20 bg-card transition hover:border-primary">
                 <div className="hover-zoom aspect-[4/5] overflow-hidden">
-                  <img src={s.photo} alt={s.name} loading="lazy" className="h-full w-full object-cover" />
+                  <img src={s.photo} alt={`${s.name}, ${s.role} at D&M Parlour Ongata Rongai`} loading="lazy" className="h-full w-full object-cover" />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-display text-xl font-bold uppercase tracking-wide">{s.name}</h3>

@@ -5,14 +5,17 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  as = "h2",
   className,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  as?: "h1" | "h2" | "h3";
   className?: string;
 }) {
+  const Component = as;
   return (
     <div
       className={cn(
@@ -30,9 +33,12 @@ export function SectionHeading({
           <span className="h-px w-8 bg-primary" />
         </div>
       )}
-      <h2 className="mt-4 font-display text-3xl font-bold uppercase tracking-wide sm:text-4xl md:text-5xl">
+      <Component className={cn(
+        "mt-4 font-display font-bold uppercase tracking-wide",
+        as === "h1" ? "text-4xl sm:text-5xl md:text-6xl" : "text-3xl sm:text-4xl md:text-5xl"
+      )}>
         {title}
-      </h2>
+      </Component>
       {description && (
         <p className="mt-4 text-base text-muted-foreground">{description}</p>
       )}

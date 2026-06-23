@@ -13,10 +13,10 @@ export const Route = createFileRoute("/book")({
   validateSearch: zodValidator(bookSearchSchema),
   head: () => ({
     meta: [
-      { title: "Book Now — D&M Parlour | Ongata Rongai" },
-      { name: "description", content: "Book your barbershop or salon appointment at D&M Parlour, Ongata Rongai. Pick a service, stylist, date and time in under a minute." },
-      { property: "og:title", content: "Book Now — D&M Parlour" },
-      { property: "og:description", content: "Book your appointment at D&M Parlour, Ongata Rongai." },
+      { title: "Book an Appointment | D&M Parlour Ongata Rongai" },
+      { name: "description", content: "Book your next haircut, fade, braids, or salon treatment at D&M Parlour in Ongata Rongai. Quick online booking — pick your service, stylist, and time." },
+      { property: "og:title", content: "Book an Appointment | D&M Parlour Ongata Rongai" },
+      { property: "og:description", content: "Book your next haircut, fade, braids, or salon treatment at D&M Parlour in Ongata Rongai. Quick online booking — pick your service, stylist, and time." },
       { property: "og:url", content: "/book" },
     ],
     links: [{ rel: "canonical", href: "/book" }],
@@ -32,9 +32,10 @@ function BookPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             eyebrow="Reserve Your Chair"
-            title="Book An Appointment"
+            title="Book Your Appointment"
             description="Five quick steps. No deposit. We'll confirm by SMS."
             align="center"
+            as="h1"
           />
         </div>
       </section>
