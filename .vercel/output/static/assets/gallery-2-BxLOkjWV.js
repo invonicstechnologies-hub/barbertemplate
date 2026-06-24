@@ -1,0 +1,1 @@
+import{h as e}from"./data-CY5m_QPQ.js";var t=e(`arrow-right`,[[`path`,{d:`M5 12h14`,key:`1ays0h`}],[`path`,{d:`m12 5 7 7-7 7`,key:`xquz4c`}]]),n=`/assets/gallery-2-nLNqWiyt.jpg`;export{t as n,n as t};
