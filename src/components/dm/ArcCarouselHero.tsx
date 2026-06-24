@@ -216,7 +216,7 @@ export function ArcCarouselHero() {
                           <div className="font-display text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
                             {s.tag}
                           </div>
-                          <div className="mt-1 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                          <div className="mt-1 font-display text-lg font-bold uppercase tracking-wide text-background">
                             {s.title}
                           </div>
                         </div>
@@ -269,12 +269,12 @@ export function ArcCarouselHero() {
                   }}
                 >
                   <img src={s.src} alt={s.title} className="h-full w-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/75 via-transparent to-transparent" />
                   <div className="absolute inset-x-0 bottom-5 px-4 text-center">
                     <div className="font-display text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
                       {s.tag}
                     </div>
-                    <div className="mt-1 font-display text-base font-bold uppercase tracking-wide">
+                    <div className="mt-1 font-display text-base font-bold uppercase tracking-wide text-background">
                       {s.title}
                     </div>
                   </div>
