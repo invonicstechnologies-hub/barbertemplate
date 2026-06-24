@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, ArrowRight, Star, Scissors, Sparkles } from "lucide-react";
+import { ArrowRight, Star, Scissors, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/dm/SectionHeading";
+import { ArcCarouselHero } from "@/components/dm/ArcCarouselHero";
 import { services, testimonials, formatKES } from "@/components/dm/data";
 
 import heroImg from "@/assets/hero.jpg";
@@ -31,57 +32,8 @@ const highlights = services.filter((s) =>
 function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <img
-            src={heroImg}
-            alt="Barber giving a fade haircut in a dimly lit shop"
-            width={1920}
-            height={1280}
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-        </div>
-
-        <div className="mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-center px-4 py-24 sm:px-6">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/60 px-3 py-1 backdrop-blur">
-              <MapPin className="h-3.5 w-3.5 text-primary" />
-              <span className="font-display text-xs font-semibold uppercase tracking-widest text-foreground/90">
-                Ongata Rongai · Kenya
-              </span>
-            </div>
-
-            <h1 className="mt-6 font-display text-6xl font-bold uppercase leading-[0.95] tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
-              D<span className="text-primary">&amp;</span>M
-              <br />
-              Parlour
-            </h1>
-
-            <div className="mt-6 flex items-center gap-4">
-              <span className="h-px w-14 bg-primary" />
-              <h2 className="font-display text-lg font-semibold uppercase tracking-[0.25em] text-primary">
-                Sharp Cuts. Bold Style.
-              </h2>
-            </div>
-
-            <p className="mt-6 max-w-lg text-base text-foreground/80 sm:text-lg">
-              Barbershop and unisex salon. Fades, beards, braids, weaves and glam — all under one roof, walking distance from Maasai Mall.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="font-display text-sm font-semibold uppercase tracking-wider gold-glow">
-                <Link to="/book">Book Now <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary/50 font-display text-sm font-semibold uppercase tracking-wider hover:border-primary">
-                <Link to="/services">View Services</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* HERO — split-screen arc carousel */}
+      <ArcCarouselHero />
 
       {/* INTRO */}
       <section className="border-y border-primary/20 bg-background py-20 sm:py-28">
