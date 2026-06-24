@@ -207,8 +207,8 @@ export function ArcCarouselHero() {
                       <div
                         className={`absolute inset-0 transition-opacity duration-500 ${
                           isActive
-                            ? "bg-gradient-to-t from-background/70 via-transparent to-transparent opacity-100"
-                            : "bg-background/40 opacity-100"
+                            ? "bg-gradient-to-t from-background/80 via-background/10 to-transparent"
+                            : "bg-background/15"
                         }`}
                       />
                       {isActive && (
