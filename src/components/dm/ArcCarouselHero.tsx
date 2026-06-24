@@ -154,14 +154,14 @@ export function ArcCarouselHero() {
 
         {/* RIGHT — arc carousel */}
         <div
-          className="relative min-h-[560px] overflow-hidden bg-gradient-to-br from-card via-background to-background lg:min-h-[760px]"
+          className="relative min-h-[560px] overflow-hidden border-l border-foreground/10 bg-gradient-to-br from-secondary via-background to-background lg:min-h-[760px]"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
           {/* glow */}
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-40 top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full bg-primary/10 blur-3xl"
+            className="pointer-events-none absolute -right-40 top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full bg-primary/20 blur-3xl"
           />
 
           {/* Desktop arc */}
@@ -188,10 +188,10 @@ export function ArcCarouselHero() {
                     }}
                   >
                     <div
-                      className={`relative h-[360px] w-[180px] overflow-hidden rounded-[140px] border transition-all duration-500 ${
+                      className={`relative h-[360px] w-[180px] overflow-hidden rounded-[140px] border-2 transition-all duration-500 ${
                         isActive
-                          ? "border-primary shadow-[0_20px_60px_-10px_hsl(var(--primary)/0.45)]"
-                          : "border-primary/15"
+                          ? "border-primary shadow-[0_20px_60px_-10px_oklch(0.74_0.13_85/0.55)]"
+                          : "border-foreground/15"
                       }`}
                       style={{
                         clipPath:
@@ -207,8 +207,8 @@ export function ArcCarouselHero() {
                       <div
                         className={`absolute inset-0 transition-opacity duration-500 ${
                           isActive
-                            ? "bg-gradient-to-t from-background/80 via-background/10 to-transparent"
-                            : "bg-background/15"
+                            ? "bg-gradient-to-t from-foreground/75 via-transparent to-transparent"
+                            : "bg-background/10"
                         }`}
                       />
                       {isActive && (
@@ -216,7 +216,7 @@ export function ArcCarouselHero() {
                           <div className="font-display text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
                             {s.tag}
                           </div>
-                          <div className="mt-1 font-display text-lg font-bold uppercase tracking-wide text-foreground">
+                          <div className="mt-1 font-display text-lg font-bold uppercase tracking-wide text-background">
                             {s.title}
                           </div>
                         </div>
@@ -269,12 +269,12 @@ export function ArcCarouselHero() {
                   }}
                 >
                   <img src={s.src} alt={s.title} className="h-full w-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/75 via-transparent to-transparent" />
                   <div className="absolute inset-x-0 bottom-5 px-4 text-center">
                     <div className="font-display text-[10px] font-semibold uppercase tracking-[0.3em] text-primary">
                       {s.tag}
                     </div>
-                    <div className="mt-1 font-display text-base font-bold uppercase tracking-wide">
+                    <div className="mt-1 font-display text-base font-bold uppercase tracking-wide text-background">
                       {s.title}
                     </div>
                   </div>
